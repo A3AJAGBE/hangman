@@ -7,7 +7,7 @@ while each wrong guess means the user loses a chance.
 """
 # Add the imports
 from words import words
-from logo import chances_stage
+from logo import chances_stage, logo
 import random
 
 # Choose a random word from the list of words
@@ -15,6 +15,9 @@ selected_word = random.choice(words)
 
 # For testing will be removed when the game is complete
 print(f'The selected word is: {selected_word}\n')
+
+# display the logo
+print(logo)
 
 # Instruction
 print('Game Instructions: \n'
