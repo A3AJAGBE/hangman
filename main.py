@@ -13,10 +13,20 @@ import random
 selected_word = random.choice(words)
 
 # For testing will be removed when the game is complete
-print(f'The selected word is: {selected_word}')
+print(f'The selected word is: {selected_word}\n')
 
 # Creating a blank the length of the word
 blanks = []
 for letter in selected_word:
     blanks.append('_')
+print(f'Guess the word: {blanks}\n')
+
+# Prompt the user
+user = input('Guess a letter that exists in the word: ').lower()
+
+# Loop through to check if the user input exists in the selected word
+for position in range(len(selected_word)):
+    letter = selected_word[position]
+    if letter == user:
+        blanks[position] = letter
 print(blanks)
