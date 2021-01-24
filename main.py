@@ -16,9 +16,10 @@ selected_word = random.choice(words)
 print(f'The selected word is: {selected_word}\n')
 
 # Creating a blank the length of the word
+selected_word_length = len(selected_word)
 blanks = []
-for letter in selected_word:
-    blanks.append('_')
+for letter in range(selected_word_length):
+    blanks += '_'
 print(f'Guess the word: {blanks}\n')
 
 # Prompt the user
