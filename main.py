@@ -59,10 +59,16 @@ while not is_game_over:
 
     # Remove 1 chance from the user chances, when it's 0 stop iteration.
     if user_guess not in selected_word:
+        print(f'Wrong guess, "{user_guess}" does not exist in the word.')
         chances -= 1
         if chances == 0:
             is_game_over = True
-            print(f'The correct word is {selected_word}. You Lose, Try Again!!!')
+            print('You have no more chances. You lose, Try again!!!')
+            print(f'The correct word is {selected_word}.')
+        elif chances == 1:
+            print(f'You have {chances} chance remaining. Be careful!!!')
+        else:
+            print(f'You have {chances} chances remaining.')
         # display the user chances stage
         print(chances_stage[chances])
 
