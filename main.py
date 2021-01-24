@@ -16,9 +16,6 @@ print(logo)
 # Choose a random word from the list of words
 selected_word = random.choice(words)
 
-# For testing will be removed when the game is complete
-print(f'The selected word is: {selected_word}\n')
-
 # Instruction
 print('Game Instructions: \n'
       'A random word is selected and the length of the word is shown in blanks.\n'
