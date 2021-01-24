@@ -15,3 +15,8 @@ selected_word = random.choice(words)
 # For testing will be removed when the game is complete
 print(f'The selected word is: {selected_word}')
 
+# Creating a blank the length of the word
+blanks = []
+for letter in selected_word:
+    blanks.append('_')
+print(blanks)
