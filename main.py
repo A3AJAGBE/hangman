@@ -22,12 +22,20 @@ for letter in range(selected_word_length):
     blanks += '_'
 print(f'Guess the word: {blanks}\n')
 
-# Prompt the user
-user = input('Guess a letter that exists in the word: ').lower()
+# Add a while loop to iterate until the user guess correctly
+is_game_over = False
 
-# Loop through to check if the user input exists in the selected word
-for position in range(len(selected_word)):
-    letter = selected_word[position]
-    if letter == user:
-        blanks[position] = letter
-print(blanks)
+while not is_game_over:
+    # Prompt the user
+    user = input('Guess a letter that exists in the word: ').lower()
+
+    # Loop through to check if the user input exists in the selected word
+    for position in range(len(selected_word)):
+        letter = selected_word[position]
+        if letter == user:
+            blanks[position] = letter
+    print(blanks)
+
+    if '_' not in blanks:
+        is_game_over = True
+        print(f'The word is {selected_word}, You Win')
