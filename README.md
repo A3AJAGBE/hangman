@@ -1,6 +1,3 @@
-# hangman
-A basic hangman game application
-
 #Day7 of #100DaysOfCode
 
 
